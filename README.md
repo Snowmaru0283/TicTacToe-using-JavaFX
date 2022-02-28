@@ -4,4 +4,5 @@ A simple project i made to learn more about JavaFX, the game consists in 2 playe
 
 
 ![s08YDxN5m8](https://user-images.githubusercontent.com/67153646/155994074-cb1fa2be-dd99-4aed-a8ba-9e0d8f5e93bf.png)
+
 Ps. sorry for the GUI it's really terrible lol 
