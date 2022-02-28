@@ -22,17 +22,22 @@ public class TicTacToe extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(TicTacToe.class.getResource("hello-view.fxml"));
         BorderPane layout = new BorderPane();
-        Button reset = new Button("Reset");
-        layout.setCenter(makeBoard());
-        layout.setBottom(reset);
-        layout.setTop(turn);
-        layout.setAlignment(reset, Pos.CENTER);
-        layout.setAlignment(turn, Pos.CENTER);
-        //reset game
-        reset.setOnAction(event-> {
-            layout.setCenter(makeBoard());
+        Button play = new Button("Play Tic Tac Toe!");
+        layout.setCenter(play);
+        layout.setAlignment(play, Pos.CENTER);
+        play.setFont(Font.font("Verdana", FontWeight.BOLD,25));
+        play.setTextFill(Color. RED);
+        layout.setPrefSize(350, 350);
+        play.setOnAction(event-> {
+            GridPane board = (GridPane)makeBoard();
+            layout.setCenter(board);
             layout.setTop(turn);
+            layout.setBottom(play);
             layout.setAlignment(turn, Pos.CENTER);
+            layout.setAlignment(play, Pos. CENTER);
+            play.setText("Restart");
+            play.setFont(Font.font("Verdana",15));
+            layout.setPadding(new Insets(15, 15, 15, 15));
         });
         Scene scene = new Scene(layout);
         stage.setScene(scene);
